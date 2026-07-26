@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>My Private Gallery ❤️</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+    margin:0;
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+}
+
+.login{
+    margin:80px auto;
+    width:85%;
+    max-width:350px;
+    background:#222;
+    padding:25px;
+    border-radius:20px;
+}
+
+input,button{
+    width:90%;
+    padding:12px;
+    margin:10px;
+    border-radius:10px;
+    border:none;
+}
+
+button{
+    background:#ff4081;
+    color:white;
+    font-size:17px;
+}
+
+#gallery{
+    display:none;
+}
+
+img{
+    width:90%;
+    max-width:400px;
+    margin:15px;
+    border-radius:15px;
+}
+
+iframe{
+    width:90%;
+    max-width:500px;
+    height:300px;
+    border-radius:15px;
+    border:none;
+}
+
+h1,h2{
+    color:#ff4081;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="login" id="login">
+
+<h2>🔒 Private Gallery</h2>
+
+<p>Password দিন</p>
+
+<input type="password" id="pass" placeholder="Password">
+
+<button onclick="openGallery()">Enter</button>
+
+</div>
+
+
+
+<div id="gallery">
+
+
+<h1>❤️ My Gallery ❤️</h1>
+
+
+<h2>📸 Photos</h2>
+
+
+<img src="Photo/photo1.jpg">
+
+<img src="Photo/photo2.jpg">
+
+
+
+<h2>🎬 Videos</h2>
+
+
+<!-- Google Drive Video 1 -->
+
+<iframe 
+src="https://drive.google.com/file/d/VIDEO_ID_1/preview"
+allow="autoplay">
+</iframe>
+
+
+<!-- Google Drive Video 2 -->
+
+<iframe 
+src="https://drive.google.com/file/d/VIDEO_ID_2/preview"
+allow="autoplay">
+</iframe>
+
+
+
+</div>
+
+
+
+<script>
+
+function openGallery(){
+
+let password = document.getElementById("pass").value;
+
+
+if(password=="282010"){
+
+document.getElementById("login").style.display="none";
+
+document.getElementById("gallery").style.display="block";
+
+}
+
+else{
+
+alert("Wrong Password!");
+
+}
+
+}
+
+</script>
+
+
+</body>
+</html>
